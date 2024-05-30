@@ -1,23 +1,31 @@
 //import { useState } from 'react'
+import { Link } from "react-router-dom";
 import './App.css'
 
 function App() {
 
   return (
-    <div className='content'>
+    <>
       <nav className='navbar'>
-        <p className='pageTitle'>California Card Games Guide</p>
+        <h1 className='pageTitle'>Casino Card Games Guide</h1>
       </nav>
-      <main className='contentContainer'>
-        <div className='gameContainer'><div className='gameName'>Ez Baccarat</div></div>
-        <div className='gameContainer'><div className='gameName'>BlackJack</div></div>
-        <div className='gameContainer'><div className='gameName'>Three Card Poker</div></div>
-        <div className='gameContainer'><div className='gameName'>Crazy 4 Poker</div></div>
-        <div className='gameContainer'><div className='gameName'>Ultimate Texas Hold &apos;em</div></div>
-        <div className='gameContainer'><div className='gameName'>Pai Gow Poker</div></div>
-        <div className='gameContainer'><div className='gameName'>Mississippi Stud</div></div>
+      <main className="main">
+        <div>
+          <Link to="cards">
+            <div className="gamesLink">California Games</div>
+          </Link>
+          <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae doloremque nam qui. Aut in cupiditate modi eligendi dolores! Ipsum saepe aperiam aspernatur culpa officiis rerum temporibus dolorum minus odio vero.
+          </h3>
+        </div>
+        <div>
+          <Link to="poker">
+            <div className="gamesLink">Poker Games</div>
+          </Link>
+          <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad reiciendis eaque ullam neque architecto, nemo tempore saepe? Expedita, rerum enim harum fuga quidem, alias eos quaerat esse ex, necessitatibus blanditiis.
+          </h3>
+        </div>
       </main>
-    </div>
+    </>
   )
 }
 
