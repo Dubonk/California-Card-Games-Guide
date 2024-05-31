@@ -3,12 +3,11 @@ body {
   height: 100vh;
   margin: 0;
   background: url('./assets/pokerBG.png');
-  background-size: auto;
+  background-size: contain;
 }
 
 #root {
   width: 100%;
-  height: 100%;
   max-width: 1280px;
   margin: 0;
   text-align: center;
@@ -21,8 +20,11 @@ body {
   margin: 0;
   padding-top: 4px;
   padding-bottom: 4px;
-  background-color: rgb(82, 16, 16);
+  background-color: rgba(82, 16, 16, .9);
   color: white;
+  position: sticky;
+  top: 0;
+  height: auto;
 }
 
 .main {
@@ -85,6 +87,7 @@ a {
   padding-bottom: 15px;
   color: white;
   margin-bottom: 12px;
+  position: absolute;
 }
 
 .gameContainer {
@@ -97,9 +100,38 @@ a {
   width: 250px;
   height: 350px;
   border-radius: 12px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 .gameName {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 6px;
+  display: flex;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.flip {
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.back {
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+button:active {
+  transform: scale(0.9);
 }
