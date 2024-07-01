@@ -5,7 +5,7 @@ import './App.css'
 function App() {
 
   return (
-    <>
+    <div className="content">
       <nav className='navbar'>
         <h1 className='pageTitle'>Casino Card Games Guide</h1>
       </nav>
@@ -25,7 +25,7 @@ function App() {
           </h3>
         </div>
       </main>
-    </>
+    </div>
   )
 }
 
