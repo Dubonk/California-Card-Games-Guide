@@ -29,6 +29,7 @@ function CalCards() {
                 {item}
                 </div>
                 <div className="back">
+                  <h3>{item}</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, porro maxime? Odio nostrum consequatur magni vel voluptate veniam veritatis tenetur voluptas reiciendis, commodi tempora hic sequi eos quibusdam, pariatur harum!</p>
                   <button>Learn more</button>
                   <button onClick={(event) => handleBackClick(event)}>close</button>

@@ -115,6 +115,7 @@ a {
   transition: transform 1s;
 }
 .gameName {
+  cursor: pointer;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 6px;
@@ -131,6 +132,10 @@ a {
 }
 
 .back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 250px;
   height: 350px;
@@ -139,6 +144,9 @@ a {
   color: black;
   transform: rotateY(180deg);
   backface-visibility: hidden;
+}
+.back > p {
+  width: 80%;
 }
 
 button:active {
